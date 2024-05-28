@@ -1,8 +1,19 @@
 import { useEffect } from "react";
 import "../style/Home.css";
+import fine from "../assets/fine.jpg";
+import invu from "../assets/invu.jpg";
+import ur from "../assets/ur.jpg";
 
 
 const Home = () => {
+    window.addEventListener('scroll', () => {
+        // Check if horizontal scroll exists
+        if (window.scrollX !== 0) {
+            // Prevent default action
+            window.scrollTo(0, window.scrollY);
+        }
+    });
+    
     useEffect(() => {
         const handleInputChange = () => {
             document.body.classList.toggle('blue');
@@ -20,24 +31,24 @@ const Home = () => {
         <div className="flex bg-yellow-50 h-full w-screen">
             <div className="flex w-1/2 h-screen items-center justify-center">
                 <h1 className="text-3xl font-semibold font-mono uppercase">
-                    kim taeyeon 
+                    kim taeyeon
                 </h1>
             </div>
 
-            <div className="flex w-1/2 h-screen items-center justify-center">
+            <div className="flex w-1/2 h-full items-center justify-center">
                 <div className="container">
                     <input type="radio" name="slider" id="item-1" defaultChecked />
                     <input type="radio" name="slider" id="item-2" />
                     <input type="radio" name="slider" id="item-3" />
                     <div className="cards">
                         <label className="card" htmlFor="item-1" id="song-1">
-                            <img src="https://i.pinimg.com/originals/37/8a/b5/378ab5d59704ff3d6456ac87cf93b421.jpg" alt="song" />
+                            <img src={invu} alt="song" />
                         </label>
                         <label className="card" htmlFor="item-2" id="song-2">
-                            <img src="https://i.pinimg.com/originals/4c/4c/16/4c4c16a5fce442d4ed64e58dd9c02d09.jpg" alt="song" />
+                            <img src={fine} alt="song" />
                         </label>
                         <label className="card" htmlFor="item-3" id="song-3">
-                            <img src="https://i.pinimg.com/originals/a1/c5/1e/a1c51e0342e9c2ae630d37d4e3bb1af2.jpg" alt="song" />
+                            <img src={ur} alt="song" />
                         </label>
                     </div>
                     <div className="player">
