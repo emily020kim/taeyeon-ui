@@ -9,7 +9,7 @@ import { HamburgerIcon } from '@chakra-ui/icons';
 
 const Navbar = () => {
     return (
-        <div className="flex justify-between items-center w-full py-2 px-2 border-b-2 border-b-slate-900 bg-yellow-50">
+        <div className=" fixed top-0 flex justify-between items-center w-full py-2 px-2 border-b-2 border-b-slate-900 bg-yellow-50">
             <h1 className="uppercase font-semibold font-mono text-2xl">
                 est. 2015
             </h1>
