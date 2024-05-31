@@ -9,3 +9,13 @@ body,
   background-color: white;
   color-scheme: light;
 }
+
+@layer utilities {
+  .max-container {
+    @apply max-w-6xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
+  }
+
+  .yellow-gradient_text {
+    @apply bg-gradient-to-r from-[#ffecb4] to-[#ffbf00] bg-clip-text text-transparent;
+  }
+}
